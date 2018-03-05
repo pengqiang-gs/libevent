@@ -18,7 +18,7 @@ The libevent includes support for several useful protocols, include `DNS`, `HTTP
 # libevent installation
 ## Linux
 ### online 
-**Ubuntu**: `sudo apt-get -y install libevent`
+**Ubuntu**: `sudo apt-get -y install libevent`<br/>
 **Linux**: `sudo yum install libevent -y`
 
 ### offline
