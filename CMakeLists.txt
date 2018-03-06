@@ -7,3 +7,6 @@ set(CMAKE_CXX_FLAGS "-ggdb3 -std=c++0x -Wall -Werror -Wno-deprecated")
 
 # add subdirectory 01.asynchronous-io
 add_subdirectory(01.asynchronous-io)
+
+# add subdirectory 02.timer
+add_subdirectory(02.timer)
