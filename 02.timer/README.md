@@ -7,10 +7,12 @@
 
 ## 第二步，初始化event事件以及回调函数
 	evtimer_set(&event, timer_callback, NULL);
-上面这个调用等价于：<br>
-	event_set(&event, -1, 0, timer_callback, NULL);
-`event_set`这个函数的原型：<br>
-	void event_set(struct event *ev, 
+
+上面这个调用等价于：
+    event_set(&event, -1, 0, timer_callback, NULL);
+
+`event_set`这个函数的原型：
+    void event_set(struct event *ev, 
 			evutil_socket_t fd, 
 			short events, 
 			void (*callback)(evutil_socket_t, short, void *), 
@@ -20,6 +22,7 @@
 3. `event`：处理句柄上的事件类型，EV\_READ, EV\_WRITE, EV\_SIGNAL。
 4. `callback`：函数指针，指向事件触发时响应的回调函数。
 5. `arg`：传递给回调函数的参数结构。
+<br>
 `定时事件因为不需要fd，只需要超时事件，因此这地方默认-1`。<br>
 这一步相当于初始化一个`event_handler`。
 
