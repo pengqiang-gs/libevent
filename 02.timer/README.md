@@ -9,14 +9,15 @@
 	evtimer_set(&event, timer_callback, NULL);
 
 上面这个调用等价于：  
-		event_set(&event, -1, 0, timer_callback, NULL);
+	event_set(&event, -1, 0, timer_callback, NULL);
 
 `event_set`这个函数的原型：  
-		void event_set(struct event *ev,
-				evutil_socket_t fd,
-				short events,
-				void (*callback)(evutil_socket_t, short, void *),
-				void *arg);
+	void event_set(struct event *ev,
+			evutil_socket_t fd,
+			short events,
+			void (*callback)(evutil_socket_t, short, void *),
+			void *arg);
+
 1. `ev`：需要初始化的event对象。
 2. `fd`：该event绑定的处理句柄，对于信号事件，就是信号；IO事件，就是文件描述符。
 3. `event`：处理句柄上的事件类型，EV\_READ, EV\_WRITE, EV\_SIGNAL。
